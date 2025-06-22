@@ -82,7 +82,7 @@ void Club::setLeader(const std::string& new_leader) {
     leader = new_leader;
 }
 
-int Club::getMemberCount() const { return memberIds.size(); }
+int Club::getMemberCount() const { return static_cast<int>(memberIds.size()); }
 const std::vector<std::string>& Club::getMemberIds() const { return memberIds; }
 
 

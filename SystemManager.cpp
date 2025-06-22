@@ -486,7 +486,8 @@ void SystemManager::displayStatistics() const {
         for (const auto& actPair : activities) {
             if (actPair.second.getClubId() == club.getId()) {
                 totalActivities++;
-                totalParticipants += actPair.second.getParticipantIds().size();
+                int cnt = static_cast<int>(actPair.second.getParticipantIds().size());
+                totalParticipants += cnt;
             }
         }
 

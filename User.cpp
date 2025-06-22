@@ -69,7 +69,7 @@ std::string OrdinaryUser::getCollege() const { return college; }
 std::string OrdinaryUser::getContact() const { return contact; }
 const std::vector<int>& OrdinaryUser::getJoinedClubs() const { return joinedClubs; }
 const std::vector<int>& OrdinaryUser::getParticipatedActivities() const { return participatedActivities; }
-int OrdinaryUser::getClubCount() const { return joinedClubs.size(); }
+int OrdinaryUser::getClubCount() const { return static_cast<int>(joinedClubs.size()); }
 
 void OrdinaryUser::displayInfo() const {
     std::cout << "Ñ§Éú: " << name << " (" << studentId << ")\n";
